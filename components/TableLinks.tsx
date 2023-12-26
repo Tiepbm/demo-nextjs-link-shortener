@@ -13,9 +13,7 @@ export default function TableLinks(props) {
     const { blogData, handleRemoveRecord } = props;
     const [blogDataState, setBlogDataState] = React.useState(blogData);
     const [isDataLoaded, setIsDataLoaded] = React.useState(false);
-    console.log("TableBlogPosts", props);
     React.useEffect(() => {
-        console.log("TableBlogPosts", props);
         setBlogDataState(props.blogData);
         setTimeout(() => {
             setIsDataLoaded(true);

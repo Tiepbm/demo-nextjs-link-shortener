@@ -28,13 +28,11 @@ export default function Index() {
         fetch(url)
             .then((response) => response.json())
             .then((response) => {
-                console.log("fetchData", data);
                 setQueryData(response);
 
             })
             .catch(function (error) {
                 // handle error
-                console.log('error', error);
                 setIsDataLoaded(true);
                 setIsError(true);
                 setErrorMsg(error.message);
@@ -52,7 +50,6 @@ export default function Index() {
             body: JSON.stringify({ alias: title, target: body }),
         })
             .then((response) => {
-                console.log("Then Response", response);
                 fetchData();
             })
             .catch(function (error) {
